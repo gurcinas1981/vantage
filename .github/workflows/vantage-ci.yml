@@ -35,3 +35,6 @@ jobs:
       - name: JavaScript syntax
         if: matrix.check == 'source'
         run: node --check app.js
+      - name: Media interaction regressions (offline DOM adapters)
+        if: matrix.check == 'source'
+        run: node --test tests/media.test.mjs
